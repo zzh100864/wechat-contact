@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
     <title>技术咨询</title>
     <style>
         * {
@@ -98,8 +99,8 @@
             <p>15年行业开发经验 值得信赖<br>软件、硬件全能 全程一对一服务</p>
         </div>
         
-        <!-- 使用用户提供的企业微信客服链接，点击将跳转到企业微信客服咨询界面 -->
-        <a href="https://work.weixin.qq.com/kfid/kfc8e47304a82995d85" class="contact-btn">
+        <!-- 使用用户提供的企业微信客服链接 -->
+        <a href="javascript:void(0);" onclick="jumpToService()" class="contact-btn">
             点击即可咨询技术部 →
         </a>
         
@@ -109,11 +110,23 @@
     </div>
     
     <script>
-        // 可以添加额外的交互逻辑
-        document.querySelector('.contact-btn').addEventListener('click', function(e) {
-            // 可以在这里添加点击事件的处理逻辑
-            console.log('点击了咨询按钮');
-        });
+        function jumpToService() {
+            var url = "https://work.weixin.qq.com/kfid/kfc8e47304a82995d85";
+            
+            // 尝试多种跳转方式以兼容不同环境（特别是小程序 web-view）
+            try {
+                // 方式1: 标准跳转
+                window.location.href = url;
+                
+                // 方式2: 延迟跳转作为备份
+                setTimeout(function() {
+                    window.location.replace(url);
+                }, 500);
+            } catch (e) {
+                console.error("Jump failed:", e);
+                window.location.href = url;
+            }
+        }
     </script>
 </body>
 </html>
