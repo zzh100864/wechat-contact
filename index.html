@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术咨询</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #d9ecff;
+        }
+        
+        .header h1 {
+            color: #1890ff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .contact-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(82, 196, 26, 0.3);
+        }
+        
+        .contact-btn::after {
+            content: "GO";
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>淘宝下单 售后无忧 安全可靠</h1>
+            <p>15年行业开发经验 值得信赖<br>软件、硬件全能 全程一对一服务</p>
+        </div>
+        
+        <!-- 使用用户提供的企业微信客服链接，点击将跳转到企业微信客服咨询界面 -->
+        <a href="https://work.weixin.qq.com/kfid/kfc8e47304a82995d85" class="contact-btn">
+            点击即可咨询技术部 →
+        </a>
+        
+        <div class="footer">
+            <p>© 2026 技术服务中心</p>
+        </div>
+    </div>
+    
+    <script>
+        // 可以添加额外的交互逻辑
+        document.querySelector('.contact-btn').addEventListener('click', function(e) {
+            // 可以在这里添加点击事件的处理逻辑
+            console.log('点击了咨询按钮');
+        });
+    </script>
+</body>
+</html>
